@@ -1,0 +1,305 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>All Our Cakes</title>
+
+    <link href="https://unpkg.com/tailwindcss@^2/dist/tailwind.min.css" rel="stylesheet">
+
+    <!-- <script src="https://cdn.jsdelivr.net/gh/alpinejs/alpine@v2.x.x/dist/alpine.min.js" defer></script> -->
+   
+
+    <link rel="preconnect" href="https://fonts.googleapis.com">
+    <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+    <link href="https://fonts.googleapis.com/css2?family=Sora:wght@200;300;400;700&display=swap" rel="stylesheet">  
+    <style>
+                @font-face {
+        font-family: Cyrene;
+        src: url(src/Cyreneregular.otf);
+        }
+
+        h1,
+        h2,
+        h3,
+        h4 {
+        font-family: Cyrene;
+        }
+
+        body {
+        font-family: Sora;
+        background: -webkit-linear-gradient(to right, rgba(249, 222, 164, 1), rgba(255, 255, 255, 1));
+        }
+        #sortbox:checked ~ #sortboxmenu {
+        opacity: 1;
+    }
+    </style>
+</head>
+<body class="bg-gradient-to-r from-yellow-100 to-yellow-50 border-t"> 
+    <div class="border-b border-gray-500">
+    <header class="w-11/12 mx-auto ">
+        <nav class="flex flex-wrap justify-between items-center mx-auto">
+            <div class="border-r border-gray-500 w-64 -ml-10">
+                <a href="/">
+                    <img src="src/img/logo.png" alt="logo kooky" class="mx-auto cursor-pointer"/>
+                </a>
+            </div>
+            <div class="flex">
+                <div class="flex flex-wrap items-center text-base justify-center">
+                    <a href="/" class="mr-5 hover:text-gray-900 cursor-pointer">HOME</a>
+                    <div class="relative mr-5">
+                        <input type="checkbox" id="sortbox" class="hidden absolute">
+                        <label for="sortbox" class="flex items-center space-x-1 cursor-pointer">
+                        <span class="text-lg">MENU</span>
+                        <svg class="h-4 w-4" xmlns="http://www.w3.org/2000/svg" fill="none" viewBox="0 0 24 24" stroke="currentColor">
+                            <path stroke-linecap="round" stroke-linejoin="round" stroke-width="2" d="M19 9l-7 7-7-7" />
+                            </svg>
+                        </label>
+                    
+                            <div id="sortboxmenu" class="absolute mt-1 left-1 top-full min-w-max shadow rounded opacity-0 bg-yellow-50 border border-gray-400 transition delay-75 ease-in-out z-10">
+                            <ul class="block text-start text-gray-900">
+                                <li><a href="#" class="block px-3 py-2 hover:bg-gray-200">Get it Today!</a></li>
+                                <li><a href="#" class="block px-3 py-2 hover:bg-gray-200">Kooky Cream Bundle</a></li>
+                                <li><a href="/mini.html" class="block px-3 py-2 hover:bg-gray-200">Mini Cakes</a></li>
+                                <li><a href="#" class="block px-3 py-2 hover:bg-gray-200">Fruits</a></li>
+                                <li><a href="#" class="block px-3 py-2 hover:bg-gray-200">Chocolate</a></li>
+                                <li><a href="#" class="block px-3 py-2 hover:bg-gray-200">Mille Crepes</a></li>
+                                <li><a href="#" class="block px-3 py-2 hover:bg-gray-200">Cheesecake</a></li>
+                                <li><a href="#" class="block px-3 py-2 hover:bg-gray-200">Unchilled</a></li>
+                                <li><a href="#" class="block px-3 py-2 hover:bg-gray-200">Loafs</a></li>
+                                <li><a href="#" class="block px-3 py-2 hover:bg-gray-200">Tarts</a></li>
+                                <li><a href="#" class="block px-3 py-2 hover:bg-gray-200">Mini Pavlova</a></li>
+                            </ul>
+                        </div>
+                    </div>
+                    <a href="#" class="mr-5 hover:text-gray-900 cursor-pointer">ORDER NOW
+                    </a>  
+                    <a href="#" class="mr-5 hover:text-gray-900 cursor-pointer">CONTACT</a>
+                    <div class="relative text-gray-800 mr-5">
+                        <input type="search" name="search" placeholder="search" class="bg-gray-70 text-gray-800 h-10 px-5 ml-8 pl-10 rounded-full text-sm focus:outline-none">
+                        <button type="submit" class="absolute left-2 top-0 mt-3 pl-4 ml-4 cursor-pointer">
+                          <svg class="h-4 w-4 fill-current" xmlns="http://www.w3.org/2000/svg" xmlns:xlink="http://www.w3.org/1999/xlink" version="1.1" id="Capa_1" x="0px" y="0px" viewBox="0 0 56.966 56.966" style="enable-background:new 0 0 56.966 56.966;" xml:space="preserve" width="512px" height="512px">
+                            <path d="M55.146,51.887L41.588,37.786c3.486-4.144,5.396-9.358,5.396-14.786c0-12.682-10.318-23-23-23s-23,10.318-23,23  s10.318,23,23,23c4.761,0,9.298-1.436,13.177-4.162l13.661,14.208c0.571,0.593,1.339,0.92,2.162,0.92  c0.779,0,1.518-0.297,2.079-0.837C56.255,54.982,56.293,53.08,55.146,51.887z M23.984,6c9.374,0,17,7.626,17,17s-7.626,17-17,17  s-17-7.626-17-17S14.61,6,23.984,6z"/>
+                          </svg>
+                        </button>
+                      </div>
+                    <div>
+                    <a href="/cart.html">
+                    <img src="src/img/cart.png" alt="logo cart" width="35" height="35" class="mx-auto mr-5 cursor-pointer"/>
+                    </a>
+                </div>
+                </div>
+            </div>
+        </nav>
+    </header>
+    </div>
+    <main class="mx-auto py-24 px-16">
+        <div class="w-full flex flex-col justify-center items-center">
+            <h1 class="text-6xl tracking-widest">ALL OUR CAKES</h1>
+            <div class="flex w-full text-md items-center justify-around mt-4 font-light">
+            <a href="#">
+            <p>ALL</p>
+            </a>
+            <a href="#">
+            <p>BEST SELLER</p>
+            </a>
+            <a href="#">
+                <p>CHEESECAKE</p>
+            </a>
+            <a href="#">
+                <p>CHOCOLATE</p>
+            </a>
+            <a href="#">
+                <p>FRUITS</p>
+            </a>
+            <a href="#">
+                <p>MILLE CREPE</p>
+            </a>
+            <a href="/mini.html">
+                <p>MINI CAKE</p>
+            </a>
+            
+            
+            
+            
+            
+            
+            </div>
+        </div>
+
+        <div class="grid grid-rows-3 grid-cols-4 gap-6 items-center justify-center mx-auto mb-16 mt-20">
+            <div class="relative w-64 h-60 rounded-3xl bg-yellow-50 border border-black"> 
+            <a href="#" class="cursor-pointer"> 
+            <div class="absolute top-4 flex flex-col left-20 -mx-1 text-center tracking-wide"> 
+            <p class="text-xs font-semibold mb-2">Lemon Pistachio</p>
+            <p class="text-xs">RM 68</p>
+            </div>
+            <img src="src/img/lemon.png" alt="lemon" width="250" height="250" class="mt-2">
+            </a>
+            </div>
+            <div class="relative w-64 h-60 rounded-3xl bg-yellow-50 border border-black"> 
+            <a href="#" class="cursor-pointer"> 
+            <div class="absolute top-4 flex flex-col left-20 -mx-1 text-center tracking-wide"> 
+            <p class="text-xs font-semibold mb-2">Mango Shortcake</p>
+            <p class="text-xs">RM 90+</p>
+            </div>
+            <img src="src/img/mangoshortcake.png" alt="mangoshortcake" width="250" height="250" class="mt-4">
+            </a>
+            </div>
+            <div class="relative w-64 h-60 rounded-3xl bg-yellow-50 border border-black"> 
+            <a href="/roselychee.html" class="cursor-pointer"> 
+            <div class="absolute top-4 flex flex-col left-20 mx-1 text-center tracking-wide"> 
+            <p class="text-xs font-semibold mb-2">Rose Lychee</p>
+            <p class="text-xs">RM 90+</p>
+            </div>
+            <img src="src/img/roselychee.png" alt="roselychee" width="250" height="250" class="mt-6">
+            </a>
+            </div>
+            <div class="relative w-64 h-60 rounded-3xl bg-yellow-50 border border-black"> 
+            <a href="#" class="cursor-pointer"> 
+            <div class="absolute top-4 flex flex-col left-20 -mx-2 text-center tracking-wide"> 
+            <p class="text-xs font-semibold mb-2">Earl Gray Tea Cake</p>
+            <p class="text-xs">RM 68</p>
+            </div>
+            <img src="src/img/Earlgrey.png" alt="Earlgrey" width="250" height="250" class="mt-3">
+            </a>
+            </div>
+            <div class="relative w-64 h-60 rounded-3xl bg-yellow-50 border border-black"> 
+            <a href="#" class="cursor-pointer"> 
+            <div class="absolute top-4 flex flex-col left-14 text-center tracking-wide"> 
+            <p class="text-xs font-semibold mb-2">Tiramisu Mille Crepe</p>
+            <p class="text-xs">RM 138</p>
+            </div>
+            <img src="src/img/tiramisumc.png" alt="tiramisumc" width="250" height="250">
+            </a>
+            </div>
+            <div class="relative w-64 h-60 rounded-3xl bg-yellow-50 border border-black"> 
+            <a href="#" class="cursor-pointer"> 
+            <div class="absolute top-4 flex flex-col left-12 text-center tracking-wide"> 
+            <p class="text-xs font-semibold mb-2">Dark Chocolate Hazelnut</p>
+            <p class="text-xs">RM 68</p>
+            </div>
+            <img src="src/img/darkchoco.png" alt="darkchoco" width="250" height="250" class="mt-2">
+            </a>
+            </div>
+            <div class="relative w-64 h-60 rounded-3xl bg-yellow-50 border border-black"> 
+            <a href="#" class="cursor-pointer"> 
+            <div class="absolute top-4 flex flex-col left-20 text-center tracking-wide"> 
+            <p class="text-xs font-semibold mb-2">Nutella Crunch</p>
+            <p class="text-xs">RM 90+</p>
+            </div>
+            <img src="src/img/nutellacrunch.png" alt="nutellacrunch" width="250" height="250" class="mt-2">
+            </a>
+            </div>
+            <div class="relative w-64 h-60 rounded-3xl bg-yellow-50 border border-black"> 
+            <a href="#" class="cursor-pointer"> 
+            <div class="absolute top-4 flex flex-col left-14 text-center tracking-wide"> 
+            <p class="text-xs font-semibold mb-2">Strawberry Shortcake</p>
+            <p class="text-xs">RM 90+</p>
+            </div>
+            <img src="src/img/strawberrys.png" alt="strawberrys" width="250" height="250" class="mt-2">
+            </a>
+            </div>
+            <div class="relative w-64 h-60 rounded-3xl bg-yellow-50 border border-black"> 
+            <a href="#" class="cursor-pointer"> 
+            <div class="absolute top-4 flex flex-col left-16 text-center tracking-wide"> 
+            <p class="text-xs font-semibold mb-2">Biscoff Cheesecake</p>
+            <p class="text-xs">RM 90+</p>
+            </div>
+            <img src="src/img/biscoff.png" alt="biscoff" width="250" height="250">
+            </a>
+            </div>
+            <div class="relative w-64 h-60 rounded-3xl bg-yellow-50 border border-black"> 
+            <a href="#" class="cursor-pointer"> 
+            <div class="absolute top-4 flex flex-col left-16 text-center tracking-wide"> 
+            <p class="text-xs font-semibold mb-2">Chocolate Blackout</p>
+            <p class="text-xs">RM 90+</p>
+            </div>
+            <img src="src/img/chocolateb.png" alt="chocolateb" width="250" height="250" class="mt-3">
+            </a>
+            </div>
+            <div class="relative w-64 h-60 rounded-3xl bg-yellow-50 border border-black"> 
+            <a href="#" class="cursor-pointer"> 
+            <div class="absolute top-4 flex flex-col left-14 text-center tracking-wide"> 
+            <p class="text-xs font-semibold mb-2">Houjicha Macadamia</p>
+            <p class="text-xs">RM 80</p>
+            </div>
+            <img src="src/img/houjicha.png" alt="houjicha" width="250" height="250" class="mt-2">
+            </a>
+            </div>
+            <div class="relative w-64 h-60 rounded-3xl bg-yellow-50 border border-black"> 
+            <a href="#" class="cursor-pointer"> 
+            <div class="absolute top-4 flex flex-col left-12 text-center tracking-wide"> 
+            <p class="text-xs font-semibold mb-2">Houjicha Double Fromage</p>
+            <p class="text-xs">RM 100+</p>
+            </div>
+            <img src="src/img/houjichadouble.png" alt="houjichadouble" width="250" height="250" class="mt-2">
+            </a>
+            </div>
+            
+        </div>
+
+
+        <div class="flex w-56 text-sm items-center justify-around mt-4 font-light mx-auto">
+            <a href="#">
+            <p>1</p>
+            </a>
+            <a href="#">
+            <p>2</p>
+            </a>
+            <a href="#">
+            <p>3</p>
+            </a>
+            <a href="#">
+            <p>4</p>
+            </a>
+            <a href="#">
+            <p class="mr-5">5</p>
+            </a>
+            <a href="#">
+            <p>Next >></p>
+            </a>
+            </div>
+        <!-- <div class="h-12 w-96 flex items-center justify-center mx-auto">
+            <a href="#" class="text-xl cursor-pointer flex text-gray-600 font-light">
+                <p><<</p>
+                <p><span class='text-transparent'>a</span>Back to home</p>
+            </a>
+            </div> -->
+    </main>
+    <footer class="bg-gradient-to-r from-yellow-200 to-yellow-100"> 
+        <div class=" min-h-full flex justify-around p-24">
+                    <a href="#" class="cursor-pointer">
+                    <p class=" bg-white rounded-full w-72 text-center py-2 px-4  text-xl font-semibold">Search</p>
+                    </a>
+                    <a href="#" class="cursor-pointer">
+                    <p class=" bg-white rounded-full w-72 text-center py-2 px-4    text-xl font-semibold">FAQ</p>
+                    </a>
+
+                </div>
+            </div>
+            <div class="flex flex-col justify-center items-center p-12 h-72">
+                <div class="mb-6">
+                    <img src="src/img/paypal.png" alt="paypal" width="50"  height="50">
+                </div>
+                <div class="mb-4">
+                    <p>&copy; 2021, Kooky Cream Bakery</p>
+                </div>
+                <div>
+                    <a href="#">
+                    <p>Terms & Condition | Collection & Delivery Policy</p>
+                    </a>
+                </div>
+                <div>
+                    <a href="#">
+                    <p>Privacy Policy | Refund Policy</p>
+                    </a>
+                </div>  
+            </div>  
+        </div>
+
+    </footer>
+</div>
+</body>
+</html>

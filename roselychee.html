@@ -1,0 +1,629 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Rose Lychee Cakes</title>
+
+    <link href="https://unpkg.com/tailwindcss@^2/dist/tailwind.min.css" rel="stylesheet">
+
+    <script src="https://cdn.jsdelivr.net/gh/alpinejs/alpine@v2.x.x/dist/alpine.min.js" defer></script>
+   
+
+    <link rel="preconnect" href="https://fonts.googleapis.com">
+    <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+    <link href="https://fonts.googleapis.com/css2?family=Sora:wght@200;300;400;700&display=swap" rel="stylesheet">  
+    <style>
+                @font-face {
+        font-family: Cyrene;
+        src: url(src/Cyreneregular.otf);
+        }
+
+        h1,
+        h2,
+        h3,
+        h4 {
+        font-family: Cyrene;
+        }
+
+        body {
+        font-family: Sora;
+        background: -webkit-linear-gradient(to right, rgba(249, 222, 164, 1), rgba(255, 255, 255, 1));
+        }
+        #sortbox:checked ~ #sortboxmenu {
+        opacity: 1;
+        }
+        [x-cloak] {
+			display: none;
+		}
+    </style>
+</head>
+<body class="bg-gradient-to-r from-yellow-100 to-yellow-50 border-t"> 
+    <div class="border-b border-gray-500">
+    <header class="w-11/12 mx-auto ">
+        <nav class="flex flex-wrap justify-between items-center mx-auto">
+            <div class="border-r border-gray-500 w-64 -ml-10">
+                <a href="/">
+                    <img src="src/img/logo.png" alt="logo kooky" class="mx-auto cursor-pointer"/>
+                </a>
+            </div>
+            <div class="flex">
+                <div class="flex flex-wrap items-center text-base justify-center">
+                    <a href="/" class="mr-5 cursor-pointer">HOME</a>
+                    <div class="relative mr-5">
+                        <input type="checkbox" id="sortbox" class="hidden absolute">
+                        <label for="sortbox" class="flex items-center space-x-1 cursor-pointer">
+                        <span class="text-lg">MENU</span>
+                        <svg class="h-4 w-4" xmlns="http://www.w3.org/2000/svg" fill="none" viewBox="0 0 24 24" stroke="currentColor">
+                            <path stroke-linecap="round" stroke-linejoin="round" stroke-width="2" d="M19 9l-7 7-7-7" />
+                            </svg>
+                        </label>
+                    
+                            <div id="sortboxmenu" class="absolute mt-1 left-1 top-full min-w-max shadow rounded opacity-0 bg-yellow-50 border border-gray-400 transition delay-75 ease-in-out z-10">
+                            <ul class="block text-start text-gray-900">
+                                <li><a href="/all.html" class="block px-3 py-2 hover:bg-gray-200">Get it Today!</a></li>
+                                <li><a href="#" class="block px-3 py-2 hover:bg-gray-200">Kooky Cream Bundle</a></li>
+                                <li><a href="#" class="block px-3 py-2 hover:bg-gray-200">Mini Cakes</a></li>
+                                <li><a href="#" class="block px-3 py-2 hover:bg-gray-200">Fruits</a></li>
+                                <li><a href="#" class="block px-3 py-2 hover:bg-gray-200">Chocolate</a></li>
+                                <li><a href="#" class="block px-3 py-2 hover:bg-gray-200">Mille Crepes</a></li>
+                                <li><a href="#" class="block px-3 py-2 hover:bg-gray-200">Cheesecake</a></li>
+                                <li><a href="#" class="block px-3 py-2 hover:bg-gray-200">Unchilled</a></li>
+                                <li><a href="#" class="block px-3 py-2 hover:bg-gray-200">Loafs</a></li>
+                                <li><a href="#" class="block px-3 py-2 hover:bg-gray-200">Tarts</a></li>
+                                <li><a href="#" class="block px-3 py-2 hover:bg-gray-200">Mini Pavlova</a></li>
+                            </ul>
+                        </div>
+                    </div>
+                    <a href="#" class="mr-5 hover:text-gray-900 cursor-pointer">ORDER NOW
+                    </a>  
+                    <a href="#" class="mr-5 hover:text-gray-900 cursor-pointer">CONTACT</a>
+                    <div class="relative text-gray-800 mr-5">
+                        <input type="search" name="search" placeholder="search" class="bg-gray-70 text-gray-800 h-10 px-5 ml-8 pl-10 rounded-full text-sm focus:outline-none">
+                        <button type="submit" class="absolute left-2 top-0 mt-3 pl-4 ml-4 cursor-pointer">
+                          <svg class="h-4 w-4 fill-current" xmlns="http://www.w3.org/2000/svg" xmlns:xlink="http://www.w3.org/1999/xlink" version="1.1" id="Capa_1" x="0px" y="0px" viewBox="0 0 56.966 56.966" style="enable-background:new 0 0 56.966 56.966;" xml:space="preserve" width="512px" height="512px">
+                            <path d="M55.146,51.887L41.588,37.786c3.486-4.144,5.396-9.358,5.396-14.786c0-12.682-10.318-23-23-23s-23,10.318-23,23  s10.318,23,23,23c4.761,0,9.298-1.436,13.177-4.162l13.661,14.208c0.571,0.593,1.339,0.92,2.162,0.92  c0.779,0,1.518-0.297,2.079-0.837C56.255,54.982,56.293,53.08,55.146,51.887z M23.984,6c9.374,0,17,7.626,17,17s-7.626,17-17,17  s-17-7.626-17-17S14.61,6,23.984,6z"/>
+                          </svg>
+                        </button>
+                      </div>
+                    <div>
+                    <a href="/cart.html">
+                    <img src="src/img/cart.png" alt="logo cart" width="35" height="35" class="mx-auto mr-5 cursor-pointer"/>
+                    </a>
+                </div>
+                </div>
+            </div>
+        </nav>
+    </header>
+    </div>
+    <main class="mx-auto py-28 px-16">
+        <div class="flex mb-48"> 
+            <div class="w-10/12 flex-col mx-auto items-center justify-center mt-6">
+                <div class="mb-12">
+                    <img src="src/img/rosebig.png" alt="roselychee">
+                </div>
+                <div class="flex flex-col w-11/12 p-6 rounded-3xl border border-black mx-10 bg-yellow-50 text-sm">
+                    
+                    <p class="font-semibold">This cake should be kept refrigerated or consumed immedietly</p>
+                    <p class="font-semibold mb-6">upon delivery!</p>
+
+                    <p>Cake Taste</p>
+                    <p class="mb-6">A square cake with rose infused sponge cake, layer with
+                        fresh cream, strawberries and lychees, and generously topped
+                        with more strawberries, lychees and dried rose petals.</p>
+                    <p>Cake Talk</p>
+                    <p>Size: 9 inch x 2.5 inch</p>
+                    <p>Weight: 1.8kg +-</p>
+                    <p>Serving Size: 14 to 16 servings</p>
+                    <p class="mb-6">Preparation and Delivery time: 2 days</p>
+
+                    <p>What's in it?</p>
+                    <p class="mb-6">Flour, butter, eggs, sugar, dairy, lychee, dried roses, strawberries</p>
+                    
+
+                    <p>Allergens</p>
+                    <p class="mb-6">Wheat, dairy, eggs</p>
+
+                    <p>Comes with</p>
+                    <p>Candles</p>
+                    <p>Handwritten Message Card</p>
+                    <p class="mb-6">Knife</p>
+
+                    <p>Delivery and Order Details</p>
+                    <p>Monday to Sunday, 10am to 7pm</p>
+                    <p>Minimum 2 days notice</p>
+                    <p class="mb-6">Place orders by 4pm to receive in 2 days</p>
+
+                    <p class="font-semibold">Kooky Cream uses halal ingredients and bakes in a halal environment.</p>
+                   
+                </div>
+            </div>
+            <div class="w-8/12 flex-col mx-auto items-center justify-center -mt-4">
+                <div class="w-8/12 flex flex-col items-center justify-center mx-auto">
+                    <div class="relative mb-6">
+                    <img src="src/img/10.png" alt="lingakaranroselychee">
+                    <p class="absolute bottom-4 left-2 text-5xl tracking-wider">Rose Lychee</p>
+                    </div>
+
+                        <p class="tracking-widest font-bold text-xl mb-8">RM150.00</p>
+                        <p class="tracking-widest text-xl mb-6">Size</p>
+                    <div class="flex grid grid-cols-2 gap-4 justify-items-between tracking-wider mb-12">
+                        <p class="px-8 py-2 border border-black">6 inch</p>
+                        <p class="px-8 py-2 border border-black bg-gradient-to-r from-yellow-100 to-yellow-50">9 inch</p>
+                    </div>
+                    <!-- <div class="bg-yellow-50 border border-black w-96 h-20 p-2">
+                        <p class="mb-3">Pick a delivery date</p>
+                        <p>25/11/2021</p>
+                    </div> -->
+                    <!-- pickdate -->
+                    <div class="mb-6 w-full">
+                        <div class="flex items-center justify-center bg-trasparent border  border-black bg-gradient-to-r from-yellow-100 to-yellow-50 h-36 bg-yellow-50" >
+                            <!-- <link
+                              rel="stylesheet"
+                              href="https://unpkg.com/tailwindcss@^1.0/dist/tailwind.min.css"
+                            />
+                            <script
+                              src="https://cdn.jsdelivr.net/gh/alpinejs/alpine@v2.x.x/dist/alpine.js"
+                              defer
+                            ></script>
+                          
+                            <style>
+                              [x-cloak] {
+                                display: none;
+                              }
+                            </style> -->
+                          
+                            <div class="antialiased sans-serif">
+                              <div x-data="app()" x-init="[initDate(), getNoOfDays()]" x-cloak>
+                                <div class="container mx-auto px-4 py-2 md:py-10">
+                                  <div class="mb-5 w-72">
+                                    <label for="datepicker" class="font-bold mb-1 text-gray-700 block"
+                                      >Pick a delivery date:</label
+                                    >
+                                    <div class="relative">
+                                      <input type="hidden" name="date" x-ref="date" />
+                                      <input
+                                        type="text"
+                                        readonly
+                                        x-model="datepickerValue"
+                                        @click="showDatepicker = !showDatepicker"
+                                        @keydown.escape="showDatepicker = false"
+                                        class="
+                                          w-full
+                                          pl-4
+                                          pr-10
+                                          py-3
+                                          leading-none
+                                          rounded-lg
+                                          shadow-sm
+                                          focus:outline-none focus:shadow-outline
+                                          text-gray-600
+                                          font-medium
+                                        "
+                                        placeholder="Select date"
+                                      />
+                          
+                                      <div class="absolute top-0 right-0 px-3 py-2">
+                                        <svg
+                                          class="h-6 w-6 text-gray-400"
+                                          fill="none"
+                                          viewBox="0 0 24 24"
+                                          stroke="currentColor"
+                                        >
+                                          <path
+                                            stroke-linecap="round"
+                                            stroke-linejoin="round"
+                                            stroke-width="2"
+                                            d="M8 7V3m8 4V3m-9 8h10M5 21h14a2 2 0 002-2V7a2 2 0 00-2-2H5a2 2 0 00-2 2v12a2 2 0 002 2z"
+                                          />
+                                        </svg>
+                                      </div>
+                          
+                                      <!-- <div x-text="no_of_days.length"></div>
+                                                  <div x-text="32 - new Date(year, month, 32).getDate()"></div>
+                                                  <div x-text="new Date(year, month).getDay()"></div> -->
+                          
+                                      <div
+                                        class="
+                                          bg-white
+                                          mt-12
+                                          rounded-lg
+                                          shadow
+                                          p-4
+                                          absolute
+                                          top-0
+                                          left-0
+                                        "
+                                        style="width: 17rem"
+                                        x-show.transition="showDatepicker"
+                                        @click.away="showDatepicker = false"
+                                      >
+                                        <div class="flex justify-between items-center mb-2">
+                                          <div>
+                                            <span
+                                              x-text="MONTH_NAMES[month]"
+                                              class="text-lg font-bold text-gray-800"
+                                            ></span>
+                                            <span
+                                              x-text="year"
+                                              class="ml-1 text-lg text-gray-600 font-normal"
+                                            ></span>
+                                          </div>
+                                          <div>
+                                            <button
+                                              type="button"
+                                              class="
+                                                transition
+                                                ease-in-out
+                                                duration-100
+                                                inline-flex
+                                                cursor-pointer
+                                                hover:bg-gray-200
+                                                p-1
+                                                rounded-full
+                                              "
+                                              :class="{'cursor-not-allowed opacity-25': month == 0 }"
+                                              :disabled="month == 0 ? true : false"
+                                              @click="month--; getNoOfDays()"
+                                            >
+                                              <svg
+                                                class="h-6 w-6 text-gray-500 inline-flex"
+                                                fill="none"
+                                                viewBox="0 0 24 24"
+                                                stroke="currentColor"
+                                              >
+                                                <path
+                                                  stroke-linecap="round"
+                                                  stroke-linejoin="round"
+                                                  stroke-width="2"
+                                                  d="M15 19l-7-7 7-7"
+                                                />
+                                              </svg>
+                                            </button>
+                                            <button
+                                              type="button"
+                                              class="
+                                                transition
+                                                ease-in-out
+                                                duration-100
+                                                inline-flex
+                                                cursor-pointer
+                                                hover:bg-gray-200
+                                                p-1
+                                                rounded-full
+                                              "
+                                              :class="{'cursor-not-allowed opacity-25': month == 11 }"
+                                              :disabled="month == 11 ? true : false"
+                                              @click="month++; getNoOfDays()"
+                                            >
+                                              <svg
+                                                class="h-6 w-6 text-gray-500 inline-flex"
+                                                fill="none"
+                                                viewBox="0 0 24 24"
+                                                stroke="currentColor"
+                                              >
+                                                <path
+                                                  stroke-linecap="round"
+                                                  stroke-linejoin="round"
+                                                  stroke-width="2"
+                                                  d="M9 5l7 7-7 7"
+                                                />
+                                              </svg>
+                                            </button>
+                                          </div>
+                                        </div>
+                          
+                                        <div class="flex flex-wrap mb-3 -mx-1">
+                                          <template x-for="(day, index) in DAYS" :key="index">
+                                            <div style="width: 14.26%" class="px-1">
+                                              <div
+                                                x-text="day"
+                                                class="text-gray-800 font-medium text-center text-xs"
+                                              ></div>
+                                            </div>
+                                          </template>
+                                        </div>
+                          
+                                        <div class="flex flex-wrap -mx-1">
+                                          <template x-for="blankday in blankdays">
+                                            <div
+                                              style="width: 14.28%"
+                                              class="
+                                                text-center
+                                                border
+                                                p-1
+                                                border-transparent
+                                                text-sm
+                                              "
+                                            ></div>
+                                          </template>
+                                          <template
+                                            x-for="(date, dateIndex) in no_of_days"
+                                            :key="dateIndex"
+                                          >
+                                            <div style="width: 14.28%" class="px-1 mb-1">
+                                              <div
+                                                @click="getDateValue(date)"
+                                                x-text="date"
+                                                class="
+                                                  cursor-pointer
+                                                  text-center text-sm
+                                                  leading-none
+                                                  rounded-full
+                                                  leading-loose
+                                                  transition
+                                                  ease-in-out
+                                                  duration-100
+                                                "
+                                                :class="{'bg-blue-500 text-white': isToday(date) == true, 'text-gray-700 hover:bg-blue-200': isToday(date) == false }"
+                                              ></div>
+                                            </div>
+                                          </template>
+                                        </div>
+                                      </div>
+                                    </div>
+                                  </div>
+                                </div>
+                              </div>
+                          
+                              <script>
+                                const MONTH_NAMES = [
+                                  "January",
+                                  "February",
+                                  "March",
+                                  "April",
+                                  "May",
+                                  "June",
+                                  "July",
+                                  "August",
+                                  "September",
+                                  "October",
+                                  "November",
+                                  "December",
+                                ];
+                                const DAYS = ["Sun", "Mon", "Tue", "Wed", "Thu", "Fri", "Sat"];
+                          
+                                function app() {
+                                  return {
+                                    showDatepicker: false,
+                                    datepickerValue: "",
+                          
+                                    month: "",
+                                    year: "",
+                                    no_of_days: [],
+                                    blankdays: [],
+                                    days: ["Sun", "Mon", "Tue", "Wed", "Thu", "Fri", "Sat"],
+                          
+                                    initDate() {
+                                      let today = new Date();
+                                      this.month = today.getMonth();
+                                      this.year = today.getFullYear();
+                                      this.datepickerValue = new Date(
+                                        this.year,
+                                        this.month,
+                                        today.getDate()
+                                      ).toDateString();
+                                    },
+                          
+                                    isToday(date) {
+                                      const today = new Date();
+                                      const d = new Date(this.year, this.month, date);
+                          
+                                      return today.toDateString() === d.toDateString() ? true : false;
+                                    },
+                          
+                                    getDateValue(date) {
+                                      let selectedDate = new Date(this.year, this.month, date);
+                                      this.datepickerValue = selectedDate.toDateString();
+                          
+                                      this.$refs.date.value =
+                                        selectedDate.getFullYear() +
+                                        "-" +
+                                        ("0" + selectedDate.getMonth()).slice(-2) +
+                                        "-" +
+                                        ("0" + selectedDate.getDate()).slice(-2);
+                          
+                                      console.log(this.$refs.date.value);
+                          
+                                      this.showDatepicker = false;
+                                    },
+                          
+                                    getNoOfDays() {
+                                      let daysInMonth = new Date(
+                                        this.year,
+                                        this.month + 1,
+                                        0
+                                      ).getDate();
+                          
+                                      // find where to start calendar day of week
+                                      let dayOfWeek = new Date(this.year, this.month).getDay();
+                                      let blankdaysArray = [];
+                                      for (var i = 1; i <= dayOfWeek; i++) {
+                                        blankdaysArray.push(i);
+                                      }
+                          
+                                      let daysArray = [];
+                                      for (var i = 1; i <= daysInMonth; i++) {
+                                        daysArray.push(i);
+                                      }
+                          
+                                      this.blankdays = blankdaysArray;
+                                      this.no_of_days = daysArray;
+                                    },
+                                  };
+                                }
+                              </script>
+                            </div>
+                          </div>  
+                    </div>
+
+                    <!-- picktime -->
+                    <div class="flex mb-6 flex-col justify-center border border-gray-400 h-36 w-full p-1 bg-gradient-to-r from-yellow-100 to-yellow-50">
+                        <p class="font-bold text-gray-900 mx-6">Pick a delivery time:</p>
+
+                        <div class="flex justify-center">
+                            <div class="mt-2 p-5 w-40 bg-white rounded-lg shadow-lg">
+                            <div class="flex">
+                                <select
+                                name="hours"
+                                class="bg-transparent text-xl appearance-none outline-none"
+                                >
+                                <option value="1">1</option>
+                                <option value="2">2</option>
+                                <option value="3">3</option>
+                                <option value="4">4</option>
+                                <option value="5">5</option>
+                                <option value="6">6</option>
+                                <option value="7">7</option>
+                                <option value="8">8</option>
+                                <option value="9">9</option>
+                                <option value="10">10</option>
+                                <option value="11">10</option>
+                                <option value="12">12</option>
+                                </select>
+                                <span class="text-xl mr-3">:</span>
+                                <select
+                                name="minutes"
+                                class="bg-transparent text-xl appearance-none outline-none mr-4"
+                                >
+                                <option value="0">00</option>
+                                <option value="30">30</option>
+                                </select>
+                                <select
+                                name="ampm"
+                                class="bg-transparent text-xl appearance-none outline-none"
+                                >
+                                <option value="am">AM</option>
+                                <option value="pm">PM</option>
+                                </select>
+                            </div>
+                            </div>
+                        </div>
+                    </div>
+
+                    <input type="handwritten" name="handwritten" placeholder="Handwritten Gift Card (25 words)" class="mb-6 p-2 justify-center border border-gray-400 h-32 text-sm w-full p-1 bg-gradient-to-r from-yellow-100 to-yellow-50"/>
+                    <input type="candles" name="candles" placeholder="Candles ex:3 Big 1 Small" class="mb-6 p-2 justify-center border border-gray-400 h-24 text-sm w-full p-1 bg-gradient-to-r from-yellow-100 to-yellow-50"/>
+                    <input type="mobile" name="mobile" placeholder="Phone Number" class="mb-6 p-2  border border-gray-400 h-24 text-sm w-full p-1 bg-gradient-to-r from-yellow-100 to-yellow-50"/>
+                    </div>
+                    <div class="w-8/12 mb-12 items-center justify-center flex mx-auto">
+                        <!-- <div class="">
+                            <p class="text-sm h-6 bg-yellow-50 py-1 px-2 border border-black text-center">Quantity</p>
+                        </div>
+                        <div class="flex flex-col items-center justify-center bg-yellow-50"> 
+                            <p class="w-5 h-3 border border-black text-center">&and;</p>
+                            <p class="w-5 h-3 border border-black text-center">&or;</p>
+                        </div> -->
+
+                        <div class="flex flex-wrap">
+                            <div class="flex 1/4">
+                                <p class="px-2 py-5 bg-white border border-gray-800"> Quantity</p>
+                            </div>
+                            
+                           <div class="flex flex-col w-2/12">
+                              <button
+                              class="text-gray-800 text-center text-md font-semibold  bg-white focus:bg-yellow-50 focus:outline-none border border-gray-800 focus:border-gray-600 p-1">
+                              &and;
+                              </button>
+                              <button
+                              class="text-gray-800 text-center text-md font-semibold bg-white focus:bg-yellow-50 focus:outline-none border border-gray-800 focus:border-gray-600 p-1">
+                              &or;
+                             </button>
+                            </div>
+                            <div class="flex w-2/12">
+                                <input type="text" value="1"
+                                class="bg-white text-sm text-gray-900 text-center focus:outline-none border border-gray-800 focus:border-gray-600 w-full">
+                               </div>
+                          </div>
+                           <div class=" w-48 h-16 bg-gray-800 text-yellow-50 py-5  text-md text-center"> 
+                               <a href="/cart.html">
+                               <p>Add To Cart</p>
+                            </a></div>
+                  </div>
+
+                    <div class="w-8/12 mx-auto flex flex-col font-semibold">
+                        <p class="mb-5">Share This:</p>
+                        <div class="flex">
+                            <a href="#" class="mr-5">
+                            <img src="src/img/7.png" alt="wa" width="50" height="50">
+                            </a>
+                            <a href="#" class="mr-5">
+                            <img src="src/img/8.png" alt="fb" width="50" height="50">
+                            </a>
+                            <a href="#" class="mr-5">
+                            <img src="src/img/9.png" alt="ig" width="50" height="50">
+                            </a>
+                        </div>
+
+                    </div>
+                </div>
+            </div>
+        </div>
+        <div class="flex flex-col items-center justify-center mx-auto">
+            <h1 class="text-5xl mb-12">You May Also Like</h1>
+            <div class="flex justify-between mb-24 ">
+                
+                <div class="w-80 h-80 flex flex-col text-center bg-yellow-50 rounded-3xl p-6 mr-5 border border-black">
+                    <a href="#">
+                    <p class="font-semibold">Mango Shortcake</p>
+                    <p>RM 90+</p>
+                    <img src="src/img/mangoshortcake.png" alt="mangoshortcake" width="300" height="300">
+                    </a>
+                </div>
+                <div class="w-80 h-80 flex flex-col text-center bg-yellow-50 rounded-3xl p-6 mr-5  border border-black">
+                    <a href="#">
+                    <p class="font-semibold">Nutella Crunch</p>
+                    <p>RM 90+</p>
+                    <img src="src/img/nutellacrunch.png" alt="nutellacrunch" width="300" height="300" class="-mt-4">
+                    </a>
+                </div>
+                <div class="w-80 h-80 flex flex-col text-center bg-yellow-50 rounded-3xl p-6 border border-black">
+                    <a href="#">
+                    <p class="font-semibold">Tiramisu Mille Crepe</p>
+                    <p>RM 138</p>
+                    <img src="src/img/tiramisumc.png" alt="tiramisumc width="300" height="300" class="-mt-6">
+                    </a>
+                </div>
+
+            </div>
+            <a href="/" class="text-xl cursor-pointer flex text-gray-600 font-light">
+                <p><<</p>
+                <p><span class='text-transparent'>a</span>Back to home</p>
+            </a>
+            </div>
+    </main>
+    <footer class="bg-gradient-to-r from-yellow-200 to-yellow-100"> 
+        <div class=" min-h-full flex justify-around p-24">
+                    <a href="#" class="cursor-pointer">
+                    <p class=" bg-white rounded-full w-72 text-center py-2 px-4  text-xl font-semibold">Search</p>
+                    </a>
+                    <a href="#" class="cursor-pointer">
+                    <p class=" bg-white rounded-full w-72 text-center py-2 px-4    text-xl font-semibold">FAQ</p>
+                    </a>
+
+                </div>
+            </div>
+            <div class="flex flex-col justify-center items-center p-12 h-72">
+                <div class="mb-6">
+                    <img src="src/img/paypal.png" alt="paypal" width="50"  height="50">
+                </div>
+                <div class="mb-4">
+                    <p>&copy; 2021, Kooky Cream Bakery</p>
+                </div>
+                <div>
+                    <a href="#">
+                    <p>Terms & Condition | Collection & Delivery Policy</p>
+                    </a>
+                </div>
+                <div>
+                    <a href="#">
+                    <p>Privacy Policy | Refund Policy</p>
+                    </a>
+                </div>  
+            </div>  
+        </div>
+
+    </footer>
+</div>
+</body>
+</html>
